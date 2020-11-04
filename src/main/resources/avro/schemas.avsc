@@ -1,0 +1,111 @@
+[
+  {
+    "namespace": "io.woolford",
+    "type": "record",
+    "name": "AddressRecord",
+    "fields": [
+      {
+        "name": "address_1",
+        "type": "string"
+      },
+      {
+        "name": "address_2",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      {
+        "name": "city",
+        "type": "string"
+      },
+      {
+        "name": "state",
+        "type": "string"
+      },
+      {
+        "name": "zip",
+        "type": "string"
+      },
+      {
+        "name": "country",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "namespace": "io.woolford",
+    "type": "record",
+    "name": "NameRecord",
+    "fields": [
+      {
+        "name": "firstname",
+        "type": "string"
+      },
+      {
+        "name": "lastname",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "namespace": "io.woolford",
+    "type": "enum",
+    "name": "Gender",
+    "symbols": [
+      "male",
+      "female",
+      "other"
+    ]
+  },
+  {
+    "namespace": "io.woolford",
+    "type": "record",
+    "name": "PersonRecord_v1",
+    "fields": [
+      {
+        "name": "lastName",
+        "type": "string"
+      },
+      {
+        "name": "firstName",
+        "type": "string"
+      },
+      {
+        "name": "age",
+        "type": "int"
+      },
+      {
+        "name": "gender",
+        "type": "Gender"
+      }
+    ]
+  },
+  {
+    "namespace": "io.woolford",
+    "type": "record",
+    "name": "PersonRecord_v2",
+    "fields": [
+      {
+        "name": "lastName",
+        "type": "string"
+      },
+      {
+        "name": "firstName",
+        "type": "string"
+      },
+      {
+        "name": "ssn",
+        "type": "string"
+      },
+      {
+        "name": "age",
+        "type": "int"
+      },
+      {
+        "name": "gender",
+        "type": "Gender"
+      }
+    ]
+  }
+]

@@ -1,8 +1,0 @@
-{"namespace": "io.woolford",
-  "type": "record",
-  "name": "NameRecord",
-  "fields": [
-    {"name": "firstname", "type": "string"},
-    {"name": "lastname", "type": "string"}
-  ]
-}

@@ -22,7 +22,6 @@ public class MultiEventTypeConsumer {
 
     public static void main(String[] args) throws IOException {
 
-
         // create and load default properties
         Properties props = new Properties();
         String rootPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
