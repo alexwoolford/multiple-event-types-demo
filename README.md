@@ -22,3 +22,13 @@ In order to have multiple message types in a topic, you'll want to set the schem
 At the time of writing (2020-06-06), the deserialized messages are displayed correctly in the Confluent Control Center, but the schemas themselves aren't displayed.
 
 ![c3 annotated screenshot](c3-multiple-event-types.png)
+
+## JSON vs. Avro
+
+In addition to all the schema management fu, Avro uses less network bandwidth and storage:
+
+    [main] INFO io.woolford.AvroJsonSizeComparison - {"firstname": "Alex", "lastname": "Woolford"}
+    [main] INFO io.woolford.AvroJsonSizeComparison - Avro bytes: 24
+    [main] INFO io.woolford.AvroJsonSizeComparison - JSON bytes: 45
+ 
+For this simple record, Avro was about half the number of bytes as its JSON equivalent. That translates to very significant cost-savings at scale.
