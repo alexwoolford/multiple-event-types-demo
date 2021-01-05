@@ -1,5 +1,7 @@
 package io.woolford;
 
+import GetItemRecode.DataClassification;
+import GetItemRecode.GetItemRecodeType;
 import io.confluent.kafka.serializers.KafkaAvroSerializer;
 import org.apache.kafka.clients.admin.*;
 import org.apache.kafka.clients.producer.KafkaProducer;

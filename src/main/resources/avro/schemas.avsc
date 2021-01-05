@@ -107,5 +107,324 @@
         "type": "Gender"
       }
     ]
+  },
+  {
+      "type": "record",
+      "name": "GetItemRecodeType",
+      "namespace": "GetItemRecode",
+      "fields": [
+          {
+              "name": "DocumentData",
+              "type": {
+                  "type": "record",
+                  "name": "DocumentData",
+                  "fields": [
+                      {
+                          "name": "Document",
+                          "type": {
+                              "type": "record",
+                              "name": "DocumentType",
+                              "fields": [
+                                  {
+                                      "name": "ReleaseId",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "VersionId",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "SystemEnvironmentCd",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "DocumentID",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "AlternateDocumentID",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "InboundOutboundInd",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "DocumentNm",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "CreationDt",
+                                      "type": "long",
+                                      "logicalType": "timestamp-millis"
+                                  },
+                                  {
+                                      "name": "Description",
+                                      "type": {
+                                          "type": "array",
+                                          "items": "string"
+                                      }
+                                  },
+                                  {
+                                      "name": "SourceApplicationCd",
+                                      "type": {
+                                          "type": "array",
+                                          "items": "string"
+                                      }
+                                  },
+                                  {
+                                      "name": "TargetApplicationCd",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "Note",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "GatewayNm",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "SenderId",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "ReceiverId",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "RoutingSystemNm",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "InternalFileTransferInd",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "InterchangeDate",
+                                      "type": "int",
+                                      "logicalType": "date"
+                                  },
+                                  {
+                                      "name": "InterchangeTime",
+                                      "type": "int",
+                                      "logicalType": "time-millis"
+                                  },
+                                  {
+                                      "name": "ExternalTargetInd",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "DataClassification",
+                                      "type": {
+                                          "type": "record",
+                                          "name": "DataClassification",
+                                          "fields": [
+                                              {
+                                                  "name": "DataClassificationLevel",
+                                                  "type": {
+                                                      "type": "record",
+                                                      "name": "CodeWithDescription",
+                                                      "fields": [
+                                                          {
+                                                              "name": "Code",
+                                                              "type": "string"
+                                                          },
+                                                          {
+                                                              "name": "Description",
+                                                              "type": "string"
+                                                          },
+                                                          {
+                                                              "name": "ShortDescription",
+                                                              "type": "string"
+                                                          }
+                                                      ]
+                                                  }
+                                              },
+                                              {
+                                                  "name": "BusinessSensitivityLevel",
+                                                  "type": "CodeWithDescription"
+                                              },
+                                              {
+                                                  "name": "PHIdataInd",
+                                                  "type": "string"
+                                              },
+                                              {
+                                                  "name": "PCIdataInd",
+                                                  "type": "string"
+                                              },
+                                              {
+                                                  "name": "PIIdataInd",
+                                                  "type": "string"
+                                              }
+                                          ]
+                                      }
+                                  }
+                              ]
+                          }
+                      },
+                      {
+                          "name": "DocumentAction",
+                          "type": {
+                              "type": "record",
+                              "name": "DocumentActionType",
+                              "fields": [
+                                  {
+                                      "name": "ActionTypeCd",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "RecordTypeCd",
+                                      "type": "string"
+                                  }
+                              ]
+                          }
+                      }
+                  ]
+              }
+          },
+          {
+              "name": "ItemRecodeData",
+              "type": {
+                  "type": "record",
+                  "name": "ItemRecodeType",
+                  "fields": [
+                      {
+                          "name": "CurrentCIC",
+                          "type": {
+                              "type": "record",
+                              "name": "CurrentCIC",
+                              "fields": [
+                                  {
+                                      "name": "CorporateItemCd",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "ItemDsc",
+                                      "type": {
+                                          "type": "record",
+                                          "name": "ItemDscType",
+                                          "fields": [
+                                              {
+                                                  "name": "WarehouseItemDsc",
+                                                  "type": "string"
+                                              },
+                                              {
+                                                  "name": "InternetItemDsc",
+                                                  "type": "string"
+                                              },
+                                              {
+                                                  "name": "RetailItemDsc",
+                                                  "type": "string"
+                                              },
+                                              {
+                                                  "name": "VendorItemDsc",
+                                                  "type": "string"
+                                              }
+                                          ]
+                                      }
+                                  }
+                              ]
+                          }
+                      },
+                      {
+                          "name": "NewCIC",
+                          "type": {
+                              "type": "record",
+                              "name": "NewCIC",
+                              "fields": [
+                                  {
+                                      "name": "CorporateItemCd",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "ItemDsc",
+                                      "type": "ItemDscType"
+                                  }
+                              ]
+                          }
+                      },
+                      {
+                          "name": "DateChangeTS",
+                          "type": "long",
+                          "logicalType": "timestamp-millis"
+                      },
+                      {
+                          "name": "FirstEffectiveDt",
+                          "type": "string"
+                      },
+                      {
+                          "name": "LastEffectiveDt",
+                          "type": "string"
+                      },
+                      {
+                          "name": "RecodeIndicatorData",
+                          "type": {
+                              "type": "record",
+                              "name": "RecodeIndicatorData",
+                              "fields": [
+                                  {
+                                      "name": "ExpressInd",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "MENDInd",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "DmndAggrInd",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "ItmSyncInd",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "CurrentInd",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "HistoryInd",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "PendingInd",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "WIMSInd",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "ShipHistInd",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "InvoiceInd",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "MergeInd",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "ChangeMergeInd",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "PACSInd",
+                                      "type": "string"
+                                  },
+                                  {
+                                      "name": "ItmMovInd",
+                                      "type": "string"
+                                  }
+                              ]
+                          }
+                      }
+                  ]
+              }
+          }
+      ]
   }
 ]

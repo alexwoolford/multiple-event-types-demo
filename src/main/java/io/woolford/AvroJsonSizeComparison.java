@@ -25,6 +25,24 @@ public class AvroJsonSizeComparison {
         logger.info("Avro bytes: " + nameRecordAvroBytesLength);
         logger.info("JSON bytes: " + nameRecordJsonBytesLength);
 
+        // create an Avro address record
+        AddressRecord addressRecord = AddressRecord.newBuilder()
+                .setAddress1("326 St Ida Circle")
+                .setAddress2("")
+                .setCity("Lafayette")
+                .setState("Colorado")
+                .setZip("80026")
+                .setCountry("United States")
+                .build();
+
+        // calculate lengths for Avro and JSON (in bytes)
+        int addressRecordAvroBytesLength = addressRecord.toByteBuffer().array().length;
+        int addressRecordJsonBytesLength = addressRecord.toString().getBytes().length;
+
+        logger.info(addressRecord.toString());
+        logger.info("Avro bytes: " + addressRecordAvroBytesLength);
+        logger.info("JSON bytes: " + addressRecordJsonBytesLength);
+
     }
 
 }
